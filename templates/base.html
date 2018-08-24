@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>{% block title%}Title here{% endblock %}</title>
+    {% block style %}
+        <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/starter-template.css' %}" rel="stylesheet">
+        <link href="{% static 'crawler/css/style.css' %}" rel="stylesheet">
+    {% endblock %}
+
+</head>
+<body>
+
+    {% block navbars%}
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="/" class="navbar-brand">Pdf crawler</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="/">Files</a></li>
+                <li><a href="/crawler/urllist/">Urls</a></li>
+                <li><a>ReadMe</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+    {% endblock %}
+
+    <div class="container">
+    {% block content %}
+
+    {% endblock %}
+    </div><!-- /.container -->
+
+    {% block js %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,5 @@
+/virtenv
+/.idea
+/media
+/static_deploy
+*.pyc

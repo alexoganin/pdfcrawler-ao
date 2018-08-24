@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title%} Url List {% endblock %}
+{% load static %}
+{% block content %}
+
+<div class="starter-template">
+    <h3>Url list</h3>
+</div>
+
+<div class="row">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Path</th>
+            <th>Http code</th>
+            <th>Alive</th>
+        </tr>
+        </thead>
+        <tbody id="url-list-table">
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+    <script src="{% static 'crawler/js/url_list.js' %}"></script>
+{% endblock %}

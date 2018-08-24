@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title%} File Viewer {% endblock %}
+{% load static %}
+{% block content %}
+
+<input type="hidden" id="file-id" value="{{ id }}">
+
+
+<div class="starter-template">
+    <h3>File name: <span id="file-name"></span></h3>
+    <h3>Url count: <span id="file-url-count"></span></h3>
+    <h3>Created Time:  <span id="file-created-time"></span></h3>
+    <h3> Url List: </h3>
+</div>
+
+<div class="row">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Path</th>
+            <th>Http code</th>
+            <th>Alive</th>
+        </tr>
+        </thead>
+        <tbody id="url-list-table">
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+    <script src="{% static 'crawler/js/file_view.js' %}"></script>
+{% endblock %}
