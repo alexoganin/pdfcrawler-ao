@@ -4,7 +4,7 @@ Django==1.11
 gunicorn==19.9.0
 idna==2.7
 psycopg2-binary==2.7.5
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 python-magic==0.4.15
 pytz==2018.5
 requests==2.19.1
